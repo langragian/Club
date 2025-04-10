@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,15 +8,15 @@
     body {
       margin: 0;
       font-family: 'Work Sans', sans-serif;
-      background-color: #ffffff;
-      color: #222222;
+      background-color: #0e0e1a;
+      color: #e0e0ff;
       line-height: 1.6;
     }
     header {
       text-align: center;
       padding: 2rem 1rem;
-      background-color: #f5f5f5;
-      border-bottom: 1px solid #ddd;
+      background-color: #1a1a2f;
+      border-bottom: 2px solid #6c63ff;
     }
     header img {
       max-width: 150px;
@@ -26,7 +25,7 @@
     header h1 {
       margin: 0;
       font-size: 2rem;
-      color: #333333;
+      color: #c7bfff;
     }
     main {
       max-width: 900px;
@@ -34,9 +33,9 @@
       padding: 2rem 1rem;
     }
     h2 {
-      border-bottom: 2px solid #e0e0e0;
+      border-bottom: 2px solid #6c63ff;
       padding-bottom: 0.5rem;
-      color: #444444;
+      color: #b3aaff;
     }
     section {
       margin-bottom: 2rem;
@@ -45,16 +44,20 @@
       width: 100%;
       border-collapse: collapse;
       margin-top: 1rem;
-      background-color: #fafafa;
+      background-color: #1e1e33;
     }
     th, td {
       text-align: left;
       padding: 0.75rem;
-      border-bottom: 1px solid #e0e0e0;
+      border-bottom: 1px solid #444466;
+      color: #e0e0ff;
     }
     th {
-      background-color: #f0f0f0;
-      color: #222222;
+      background-color: #292947;
+      color: #c0b8ff;
+    }
+    a {
+      color: #8c84ff;
     }
   </style>
 </head>
@@ -71,20 +74,17 @@
       <p>This group is meant for movie connoisseurs and enthusiasts who appreciate brilliant films from across the globe — be it world cinema, Hollywood, indie gems, or rare festival classics. We would also welcome people into our group who want to start on a journey of exploring them.</p>
       <p>Here, we screen and discuss masterclass films that provoke thought, stir emotions, and offer a glimpse into faraway lands, unfamiliar cultures, and untold stories.</p>
       <p>Weekly screenings will be held in UV’s mini theatre, featuring classics, critically acclaimed films, hidden gems, and everything in between…</p>
-    </section>
+    </section><section>
+  <h2>Upcoming Screenings</h2>
+  <div id="upcoming"></div>
+</section>
 
-    <section>
-      <h2>Upcoming Screenings</h2>
-      <div id="upcoming"></div>
-    </section>
+<section>
+  <h2>Past Screenings</h2>
+  <div id="past"></div>
+</section>
 
-    <section>
-      <h2>Past Screenings</h2>
-      <div id="past"></div>
-    </section>
-  </main>
-
-  <script>
+  </main>  <script>
     async function loadCSVData(url) {
       const res = await fetch(url);
       const text = await res.text();
@@ -118,6 +118,5 @@
     }
 
     init();
-  </script>
-</body>
+  </script></body>
 </html>
